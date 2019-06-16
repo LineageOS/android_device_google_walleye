@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_google_muskie",
+    "target_path": "device/google/muskie"
+  }
+]
