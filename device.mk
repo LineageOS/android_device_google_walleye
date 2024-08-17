@@ -68,10 +68,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/google/walleye/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
-# Shims
-PRODUCT_PACKAGES += \
-    libgui_shim
-
 # Audio
 PRODUCT_COPY_FILES += \
     device/google/walleye/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml \
@@ -131,15 +127,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.notify_nfc=1
 
-# VNDK
-PRODUCT_PACKAGES += \
-    libhidlbase-v32 \
-    libhidlbase-v32.vendor \
-    libutils-v33
-
 # CHRE
 $(call soong_config_set,chre,chre_daemon_dsp_library,//vendor/google/walleye:libsdsprpc)
-
-# DRM
-PRODUCT_PACKAGES += \
-    libcrypto_shim.vendor
