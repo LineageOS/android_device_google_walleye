@@ -19,11 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 
-$(call inherit-product, device/google/muskie/device-walleye.mk)
-$(call inherit-product-if-exists, vendor/google_devices/muskie/proprietary/device-vendor-walleye.mk)
+$(call inherit-product, device/google/walleye/device-walleye.mk)
+$(call inherit-product-if-exists, vendor/google_devices/walleye/proprietary/device-vendor-walleye.mk)
 
 PRODUCT_COPY_FILES += \
-    device/google/muskie/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+    device/google/walleye/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
 PRODUCT_RESTRICT_VENDOR_FILES := owner
 

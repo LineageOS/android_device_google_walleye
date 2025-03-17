@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter muskie walleye,$(TARGET_DEVICE)),)
+ifneq ($(filter walleye,$(TARGET_DEVICE)),)
   $(call add-radio-file,bootloader.img)
   $(call add-radio-file,radio.img)
 endif

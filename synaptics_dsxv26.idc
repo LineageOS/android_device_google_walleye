@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #
-# Input Device Calibration File for the muskie touch screen.
+# Input Device Calibration File for the walleye touch screen.
 #
 
 device.internal = 1

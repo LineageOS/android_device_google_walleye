@@ -47,7 +47,6 @@
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/vendor)
 
-$(call add-clean-step, rm -rf $(OUT_DIR)/target/product/muskie/vendor/etc/sensors/sensor_def_qcomdev.conf)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/walleye/vendor/etc/sensors/sensor_def_qcomdev.conf)
 
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/root/init.$(PRODUCT_HARDWARE).logging.rc)
