@@ -35,6 +35,9 @@ DEVICE_PACKAGE_OVERLAYS += device/google/walleye/overlay
 PRODUCT_COPY_FILES += \
     device/google/walleye/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
+PRODUCT_COPY_FILES += \
+    device/google/walleye/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+
 include device/google/wahoo/device.mk
 
 PRODUCT_COPY_FILES += \

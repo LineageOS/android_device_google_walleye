@@ -5,15 +5,19 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/google/walleye/aosp_walleye.mk)
+# Inherit from the common Open Source product configuration.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-include device/google/wahoo/device-lineage.mk
+# Inherit device specific stuff.
+$(call inherit-product, device/google/walleye/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_walleye
 PRODUCT_BRAND := google
+PRODUCT_DEVICE := walleye
+PRODUCT_MANUFACTURER := Google
 PRODUCT_MODEL := Pixel 2
+PRODUCT_NAME := lineage_walleye
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
