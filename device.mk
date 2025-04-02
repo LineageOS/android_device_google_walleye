@@ -114,14 +114,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/google/walleye/synaptics_dsxv26.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsxv26.idc
 
-# Enable modem logging
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.smlog_switch=1 \
-    ro.radio.log_loc="/data/vendor/modem_dump" \
-    ro.radio.log_prefix="modem_log_"
-endif
-
 #IMU calibration
 PRODUCT_PROPERTY_OVERRIDES += \
   persist.config.calibration_fac=/persist/sensors/calibration/calibration.xml
