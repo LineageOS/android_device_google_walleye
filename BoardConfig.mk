@@ -14,20 +14,22 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/google/walleye
+
 TARGET_BOOTLOADER_BOARD_NAME := walleye
 DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS := 0x00000056
 
-include device/google/wahoo/BoardConfig.mk
+include $(COMMON_PATH)/BoardConfig.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 
 # sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += device/google/walleye/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/wahoo-setup.sh
 
-BOARD_LISA_TARGET_SCRIPTS := device/google/wahoo/lisa/
+BOARD_LISA_TARGET_SCRIPTS := $(COMMON_PATH)/lisa
 
 # VTS DTBO Verification. This kernel cmdline parameter should be added by the bootloader
 # for all future devices.
